@@ -151,7 +151,7 @@ nav {
 }
 
 .title {
-  width: 340px;
+  width: 15vw;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
