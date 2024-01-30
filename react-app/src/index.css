@@ -9,4 +9,5 @@
 
 body{
   background-color: rgb(76, 76, 76);
+  user-select: none;
 }
