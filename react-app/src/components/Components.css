@@ -80,7 +80,7 @@ nav {
 
 .booksArea {
   display: grid;
-  grid-template-columns: repeat(4, 352px);
+  grid-template-columns: repeat(4, 390px);
   column-gap: 60px;
   row-gap: 60px;
 }
@@ -92,7 +92,7 @@ nav {
   background-color: #000000;
   position: absolute;
   margin-top: -407px;
-  width: 352px;
+  width: 390px;
   z-index: -1;
   margin-left: 10px;
 }
@@ -151,7 +151,7 @@ nav {
 }
 
 .title {
-  width: 300px;
+  width: 340px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
