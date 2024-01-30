@@ -10,18 +10,21 @@ nav {
   justify-content: space-between;
   box-sizing: border-box;
   border-bottom: 3px solid #000000;
+  position: relative;
 }
 
 .logoImg {
-  width: 400px;
+  height: 50px;
 }
 
 .searchArea {
+  margin-left: -14vw;
+  align-self: center;
   display: flex;
 }
 
 .searchBox {
-  width: 500px;
+  width: 30vw;
   height: 50px;
   background-color: hsl(0, 0%, 100%);
   border: 1px solid black;
@@ -30,7 +33,6 @@ nav {
 .searchButton {
   width: 50px;
   height: 50px;
-  /* background-color: #f38785; */
   border: 1px solid black;
   display: flex;
   align-items: center;
@@ -52,66 +54,108 @@ nav {
   font-weight: 900;
   color: #ffffff;
   background-color: #ed3836;
-  border: 3px solid #000000;
+  transition: background-color 0.6s ease;
+}
+
+.registerButton:hover {
+  background-color: #7c6a96;
+  color: #fff;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  place-items: center;
 }
 
 /* MAIN AREA */
 
 .MainArea {
-  /* border-radius: 20px; */
-  margin-top: 80px;
-  width: 75vw;
-  background-color: rgb(255, 255, 255);
+  margin-top: 50px;
+  width: 95vw;
   padding: 30px;
-  border: 4px solid black;
 }
 
-.booksArea{
+.booksArea {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  place-items: center;
-  row-gap: 40px;
+  grid-template-columns: repeat(4, 352px);
+  column-gap: 60px;
+  row-gap: 60px;
 }
 
-.center{
+
+.below {
+  height: 420px;
+  border: 5px solid black;
+  background-color: #000000;
+  position: absolute;
+  margin-top: -407px;
+  width: 352px;
+  z-index: -1;
+  margin-left: 10px;
+}
+
+.bookTop {
+  height: 270px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  transition: background-color 0.3s ease;
 }
 
-.book{
+.above {
+  background-color: white;
+  transition: background-color 0.5s ease;
+}
+
+.above:hover {
+  background-color: #f1e4f7;
+  cursor: pointer;
+}
+
+.book {
+  transition: transform 0.5s ease;
+}
+
+.book:hover {
+  transform: scale(1.1);
+}
+
+.purple {
+  background-color: #ebe1f0;
+}
+
+.bookTop:hover {
+  cursor: pointer;
+  background-color: #f1e4f7;
+}
+
+.bookImage {
+  height: 200px;
+  width: 160px;
+}
+
+.above {
+  height: 420px;
   border: 2px solid black;
-  background-color: rgb(255, 255, 255);
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  width: 80%;
-  height: 100%;
-  padding: 25px;
-  /* border-radius: 20px; */
 }
 
-.bookImage{
-  /* border-radius: 10px; */
-  height: 400px;
+.bookBottom {
+  height: 146px;
+  background-color: #7c6a96;
+  color: white;
+  padding-top: 16px;
+  padding-left: 22px;
 }
 
-.title{
-  font-size: 20px;
-  display: inline-block;
-  text-overflow: ellipsis;
+.title {
+  width: 300px;
   overflow: hidden;
-  width: 100%;
-}
-
-.hideRest{
-  /* background-color: #ed3836; */
-  width: 240px;
   white-space: nowrap;
-  overflow: hidden;
+  text-overflow: ellipsis;
 }
-
 
 /* Form Area */
 
@@ -163,5 +207,199 @@ a {
   height: 100vh;
   position: fixed;
   z-index: -1;
-  /* transform: rotate(-90deg); */
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.formArea {
+  border: 2px solid black;
+  background-color: #7c6a96;
+  padding-right: 100px;
+  padding-left: 100px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #ffffff;
+  height: 790px;
+}
+
+.forminput {
+  width: 500px;
+  height: 65px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.label {
+  margin-top: 25px;
+  font-size: 20px;
+}
+
+input:focus {
+  outline: 2px solid gray;
+}
+
+.signUp {
+  width: 500px;
+  height: 70px;
+  margin-top: 40px;
+  border-radius: 10px;
+  font-weight: 900;
+  background-color: rgb(64, 173, 64);
+  color: white;
+  font-size: 22px;
+  border: none;
+  box-shadow: 3px 3px 5px green;
+}
+
+.signUp:hover {
+  cursor: pointer;
+}
+
+.alert {
+  height: 10px;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+input:focus {
+  outline: none;
+}
+
+.formBack {
+  background-color: #000;
+  width: 704px;
+  height: 50px;
+  position: absolute;
+  height: 790px;
+  z-index: -1;
+  margin-left: 20px;
+  margin-top: 20px;
+  box-shadow: 5px 5px 15px #888888;
+}
+
+.signUp:hover {
+  cursor: pointer;
+}
+
+.extraArea {
+  height: 70px;
+  color: rgba(245, 222, 179, 0);
+}
+
+.star{
+  height: 15px;
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 800px) {
+  .formArea,
+  .formBack {
+    width: 80vw;
+  }
+
+  .forminput {
+    width: 70vw;
+  }
+
+  .signUp {
+    width: 70vw;
+  }
+
+  form {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .formHeading {
+    width: 70vw;
+    text-align: center;
+  }
+
+  .logoImg {
+    height: 20px;
+  }
+
+  .booksArea {
+    display: grid;
+    grid-template-columns: repeat(2,35vw);
+  }
+
+  .logoImg {
+    display: none;
+  }
+
+  .searchBox {
+    width: 40vw;
+    margin-left: 10vw;
+    font-size: 20px;
+  }
+
+  .registerButton {
+    width: 30vw;
+  }
+
+  .above,
+  .below {
+    width: 40vw;
+  }
+
+  .title{
+    width: 30vw;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .booksArea {
+    display: grid;
+    grid-template-columns: repeat(1,80vw);
+  }
+
+  .above,
+  .below {
+    width: 80vw;
+  }
+
+  .title{
+    width: 70vw;
+  }
+  .MainArea{
+    margin: 0;
+  }
+
+  .below,.above{
+    height: 394px;
+  }
+
+  .below{
+
+    margin-top: -380px;
+  }
+
+  .bookBottom{
+    height: 120px;
+    font-size: 80%;
+  }
+}
+
+.no{
+  font-size: 40px;
+  margin-top: 50px;
+  color: #674d8b;
 }
