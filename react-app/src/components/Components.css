@@ -305,6 +305,38 @@ input:focus {
   margin-right: 5px;
 }
 
+.formArea{
+  height: 85vh;
+  width: 35vw;
+}
+
+.formBack{
+  height: 85vh;
+  width: 35vw;
+}
+
+.formHeading{
+  font-size: 2vw;
+  width: 30vw;
+  text-align: center;
+}
+
+.forminput{
+  width: 28vw;
+  height: 7vh;
+  font-size: 1.4vw;
+}
+
+.signUp{
+  height: 7vh;
+  width: 28vw;
+  margin-top: 2vw;
+}
+
+.label{
+  margin-top: 1.2vw;
+}
+
 @media screen and (max-width: 800px) {
   .formArea,
   .formBack {
